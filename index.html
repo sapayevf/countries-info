@@ -7,6 +7,72 @@
     <link rel="stylesheet" href="./styles/main.css" />
   </head>
   <body>
+    <header class="flex justify-between items-center px-[80px] py-[24px]">
+      <p class="text-[24px] font-bold header-p">Where in the world?</p>
+      <button
+        id="change-theme-btn"
+        class="px-[12px] py-[8px] bg-blue-400 text-white font-bold rounded-xl pointer"
+      >
+        Dark Mode
+      </button>
+    </header>
+    <div class="px-[80px] py-[40px]">
+      <div class="flex justify-between items-center flex-warp mb-[80px]">
+        <form class="max-w-md w-[350px]">
+          <label
+            for="default-search"
+            class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
+            >Search</label
+          >
+          <div class="relative">
+            <div
+              class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+            >
+              <svg
+                class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                />
+              </svg>
+            </div>
+            <input
+              type="search"
+              id="default-search"
+              class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+              placeholder="Search Countries..."
+              required
+            />
+          </div>
+        </form>
+
+        <form class="max-w-sm w-[200px]">
+          <select
+            id="countries"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          >
+            <option selected>Filter by Region</option>
+            <option value="Africa">Africa</option>
+            <option value="America">America</option>
+            <option value="Asia">Asia</option>
+            <option value="Europe">Europe</option>
+            <option value="Oceania ">Oceania</option>
+          </select>
+        </form>
+      </div>
+      <div id="main-list" class="main-list"></div>
+    </div>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <script src="./app.js"></script>
   </body>
 </html>
+
+

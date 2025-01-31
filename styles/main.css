@@ -1,1 +1,24 @@
-/*# sourceMappingURL=main.css.map */
+:root {
+  --header-color: white;
+  --bg-color: #f0f0f0;
+  --main-color: rgb(0, 0, 0);
+}
+
+body {
+  font-family: sans-serif;
+  background-color: var(--bg-color);
+}
+
+header {
+  background-color: var(--header-color);
+}
+
+.header-p {
+  color: var(--main-color);
+}
+
+.main-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}/*# sourceMappingURL=main.css.map */
