@@ -1,6 +1,6 @@
 :root {
   --header-color: white;
-  --bg-color: #f0f0f0;
+  --bg-color: #fafafa;
   --main-color: rgb(0, 0, 0);
 }
 
@@ -21,4 +21,22 @@ header {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 30px;
+}
+
+.selects {
+  @media (max-width: 730px) {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .form-1 {
+    @media (max-width: 730px) {
+      width: 100%;
+    }
+  }
+}
+
+.lists {
+  @media (max-width: 550px) {
+    padding: 50px;
+  }
 }
