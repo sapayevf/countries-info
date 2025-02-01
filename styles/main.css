@@ -4,6 +4,24 @@
   --main-color: rgb(0, 0, 0);
 }
 
+body.dark {
+  --header-color: #333;
+  --bg-color: #333;
+  --main-color: white;
+}
+
+b {
+  color: var(--main-color);
+}
+
+p {
+  color: var(--main-color);
+}
+
+option {
+  color: var(--main-color);
+}
+
 body {
   font-family: sans-serif;
   background-color: var(--bg-color);
@@ -21,6 +39,46 @@ header {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 30px;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: var(--bg-color);
+}
+
+input,
+select {
+  background-color: white;
+  color: black;
+  border: 1px solid #ccc;
+}
+
+.main-list > div {
+  background-color: white;
+  color: black;
+}
+
+/* Dark Mode */
+body.dark {
+  --header-color: #333;
+  --bg-color: #333;
+  --main-color: white;
+}
+
+body.dark {
+  background-color: #333;
+}
+
+body.dark input,
+body.dark select {
+  background-color: #555;
+  color: white;
+  border: 1px solid #888;
+}
+
+body.dark .main-list > div {
+  background-color: #444;
+  color: white;
 }
 
 @media (max-width: 730px) {
