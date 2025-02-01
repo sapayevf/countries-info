@@ -2,16 +2,22 @@
   --header-color: white;
   --bg-color: #fafafa;
   --main-color: rgb(0, 0, 0);
+  --a-color: rgb(55, 55, 149);
 }
 
 body.dark {
   --header-color: #333;
   --bg-color: #333;
   --main-color: white;
+  --a-color: rgb(30, 198, 70);
 }
 
 b {
   color: var(--main-color);
+}
+
+a {
+  color: var(--a-color);
 }
 
 p {

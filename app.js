@@ -62,9 +62,7 @@ function render(data) {
         <p>Region: ${country.region}</p>
         <p>Capital: ${country.capital ? country.capital[0] : "N/A"}</p>
         <br>
-        <a style="color: rgb(62, 62, 171);" target='_blank' href='${
-          country.maps.googleMaps
-        }'>View on Maps</a>
+        <a target='_blank' href='${country.maps.googleMaps}'>View on Maps</a>
       `;
 
     mainList.appendChild(countryList);
