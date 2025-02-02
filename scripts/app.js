@@ -73,7 +73,7 @@ function render(data) {
 
     countryList.addEventListener("click", () => {
       localStorage.setItem("selectedCountry", country.name.common);
-      window.location.href = "details.html";
+      window.location.href = "../pages/details.html";
     });
 
     mainList.appendChild(countryList);
