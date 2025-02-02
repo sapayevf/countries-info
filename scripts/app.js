@@ -50,20 +50,31 @@ function render(data) {
 
   data.forEach((country) => {
     const countryList = document.createElement("div");
-    countryList.classList.add("p-4", "shadow-lg", "rounded-xl", "bg-white");
+    countryList.classList.add(
+      "p-4",
+      "shadow-lg",
+      "rounded-xl",
+      "bg-white",
+      "cursor-pointer"
+    );
 
     countryList.innerHTML = `
-        <img src='${country.flags.svg}' alt='${
+          <img src='${country.flags.svg}' alt='${
       country.flags.alt || country.name.common
     }' 
-             class='w-full h-[150px] object-cover rounded-md mb-4' />
-        <b class="text-lg">${country.name.common}</b>
-        <p>Population: ${country.population.toLocaleString()}</p>
-        <p>Region: ${country.region}</p>
-        <p>Capital: ${country.capital ? country.capital[0] : "N/A"}</p>
-        <br>
-        <a target='_blank' href='${country.maps.googleMaps}'>View on Maps</a>
-      `;
+               class='w-full h-[150px] object-cover rounded-md mb-4' />
+          <b class="text-lg">${country.name.common}</b>
+          <p>Population: ${country.population.toLocaleString()}</p>
+          <p>Region: ${country.region}</p>
+          <p>Capital: ${country.capital ? country.capital[0] : "N/A"}</p>
+          <br>
+          <a target='_blank' href='${country.maps.googleMaps}'>View on Maps</a>
+        `;
+
+    countryList.addEventListener("click", () => {
+      localStorage.setItem("selectedCountry", country.name.common);
+      window.location.href = "details.html";
+    });
 
     mainList.appendChild(countryList);
   });

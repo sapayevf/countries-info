@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Country Details</title>
+    <link rel="stylesheet" href="../styles/main.css" />
+  </head>
+  <body>
+    <header class="flex justify-between items-center px-[80px] py-[24px]">
+      <p class="text-[24px] font-bold header-p">Where in the world?</p>
+      <button
+        id="change-theme-btn"
+        class="px-[12px] py-[8px] bg-blue-400 text-white font-bold rounded-xl pointer"
+      >
+        Dark Mode
+      </button>
+    </header>
+
+    <div class="details-container px-[80px] py-[40px]">
+      <button
+        onclick="window.history.back()"
+        class="px-[12px] py-[8px] bg-blue-400 text-white font-bold rounded-xl pointer"
+      >
+        ← Back
+      </button>
+      <div id="country-details" class="mt-8"></div>
+    </div>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="../scripts/app.js"></script>
+    <script src="../scripts/details.js"></script>
+  </body>
+</html>
